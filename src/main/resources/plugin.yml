@@ -1,0 +1,5 @@
+name: bCustomMessages
+version: 1.0.0
+author: bncke
+main: dev.bencke.bCustomMessages
+commands:

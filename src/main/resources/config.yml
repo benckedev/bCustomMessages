@@ -1,0 +1,15 @@
+# _     ___        _             __  __
+#| |__ / __|  _ __| |_ ___ _ __ |  \/  |___ ______ __ _ __ _ ___ ___
+#| '_ \ (_| || (_-<  _/ _ \ '  \| |\/| / -_|_-<_-</ _` / _` / -_|_-<
+#|_.__/\___\_,_/__/\__\___/_|_|_|_|  |_\___/__/__/\__,_\__, \___/__/
+#|___/
+
+whitelist:
+  enabled: true
+  kick_message: "&c&lWHITELIST\n&cVocê não está na whitelist."
+
+shutdown:
+  message: "&cO servidor está reiniciando."
+
+command:
+  unknown_command: "&cComando inexistente."
