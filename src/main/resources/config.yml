@@ -13,3 +13,6 @@ shutdown:
 
 command:
   unknown_command: "&cComando inexistente."
+  # utiilize caso algum comando esteja dando como inexistente
+  block_cmd:
+    - arenapvp

@@ -1,6 +1,7 @@
 package dev.bencke.listeners;
 
 import dev.bencke.bCustomMessages;
+import dev.bencke.config.BlockCommands;
 import dev.bencke.config.Messages;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -24,10 +25,13 @@ public class PlayerListeners implements Listener {
         String message = event.getMessage().substring(1);
         String[] args = message.split(" ");
 
-        if (bCustomMessages.getInstance().getServer().getPluginCommand(args[0]) == null || !bCustomMessages.getInstance().getServer().getPluginCommand(args[0]).isRegistered()) {
+        if (BlockCommands.block_cmds.contains(args[0]) && (bCustomMessages.getInstance().getServer().getPluginCommand(args[0]) == null || !bCustomMessages.getInstance().getServer().getPluginCommand(args[0]).isRegistered())) {
             event.setCancelled(true);
             event.getPlayer().sendMessage(Messages.unknown_command);
+            return;
         }
+
+
     }
 
 }

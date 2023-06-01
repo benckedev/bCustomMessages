@@ -1,5 +1,6 @@
 package dev.bencke;
 
+import dev.bencke.command.BCM;
 import dev.bencke.config.Messages;
 import dev.bencke.listeners.PlayerListeners;
 import org.bukkit.Bukkit;
@@ -17,6 +18,7 @@ public class bCustomMessages extends JavaPlugin {
     public void onEnable() {
         instance = this;
         saveDefaultConfig();
+        Bukkit.getPluginCommand("bcm").setExecutor(new BCM());
         Bukkit.getPluginManager().registerEvents(new PlayerListeners(), this);
 
         getLogger().info("Plugin carregado com sucesso.");
